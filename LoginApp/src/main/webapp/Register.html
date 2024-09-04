@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #2c3e50; /* Dark blue background */
+            margin: 0;
+            padding: 20px;
+            color: #ffffff; /* White text color */
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #e74c3c; /* Red heading color */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 25px;
+            border: 1px solid #ffffff; /* White border color */
+            background-color: #2c3e50; /* Dark blue background */
+            color: #ffffff; /* White text color */
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #e74c3c; /* Red border color on focus */
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background-color: #e74c3c; /* Red button color */
+            color: #ffffff; /* White text color */
+            border: none;
+            border-radius: 25px;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #c0392b; /* Darker red on hover */
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        a {
+            color: #e74c3c; /* Red link color */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #c0392b; /* Darker red on hover */
+        }
+    </style>
+</head>
+<body>
+    <form action="RegisterServlet" method="post">
+        <h2>Registration</h2>
+        <label>Enter Username:</label>
+        <input type="text" name="uname" required />
+        <br/>
+        <label>Enter Password:</label>
+        <input type="password" name="pwd" required />
+        <br/>
+        <label>Confirm Password:</label>
+        <input type="password" name="cnfm" required />
+        <br/>
+        <input type="submit" value="Register" />
+        <p>Already registered? <a href="Login.html">Login</a> now</p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a; /* Dark background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #ffffff; /* White text color */
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+            width: 350px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+            color: #ff3d00; /* Red heading color */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #ffffff; /* White label text color */
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 25px;
+            border: 1px solid #ff3d00; /* Red border color */
+            background-color: #1a1a1a; /* Dark background */
+            color: #ffffff; /* White text color */
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #ff3d00; /* Red border color on focus */
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background-color: #ff3d00; /* Red button color */
+            color: #ffffff; /* White text color */
+            border: none;
+            border-radius: 25px;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #d32f00; /* Darker red on hover */
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #ffffff; /* White text color */
+        }
+
+        a {
+            color: #ff3d00; /* Red link color */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #d32f00; /* Darker red on hover */
+        }
+    </style>
+</head>
+<body>
+    <form action='LoginServlet' method='get'>
+        <h2>Login</h2>
+        <label>Username:</label>
+        <input type="text" name="uname" required />
+        <br/>
+        <label>Password:</label>
+        <input type="password" name="pwd" required />
+        <br/>
+        <input type="submit" value="Login" />
+        <p>Not yet registered? <a href="Register.html">Register</a> now</p>
+    </form>
+</body>
+</html>
